@@ -1,202 +1,245 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Obtenez un prêt personnel ou pour entreprise au Québec rapidement. Solutions de financement flexibles et taux compétitifs.">
-    <meta name="keywords" content="prêt personnel Québec, prêt entreprise Québec, financement rapide, crédit Québec">
-    <meta name="author" content="Prêts Québec">
-    <title>Prêts Québec - Financement Personnel et Entreprise</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <title>Loan Amortization Schedule</title>
     <style>
-        :root {
-            --primary-color: #007bff;
-            --secondary-color: #6c757d;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #fff;
         }
 
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://edvvadjones.com/wp-content/uploads/2025/02/prets-quebec-financement-rapide.jpg');
-            background-size: cover;
-            background-position: center;
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #007bff;
             color: white;
-            padding: 100px 0;
-        }
-
-        .form-section {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-        }
-
-        .faq-section {
-            padding: 50px 0;
-        }
-
-        .cta-button {
-            background-color: var(--primary-color);
+            padding: 10px 20px;
             border: none;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 0;
         }
 
-        .cta-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+        button:hover {
+            background: #0056b3;
         }
 
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 60px 0;
-            }
+        #result {
+            display: none;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: right;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .summary {
+            margin: 20px 0;
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Prêts Québec</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#formulaire">Demande</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                </ul>
+    <div class="container">
+        <h1>Loan Amortization Schedule</h1>
+        <div class="form-container">
+            <p>Enter your loan parameters to get a detailed schedule of your loan in the form of an amortization table.</p>
+            
+            <div class="form-group">
+                <label for="amount">Loan Amount ($):</label>
+                <input type="number" id="amount" min="0" step="100" value="7000">
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="accueil" class="hero-section">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold">Financement Rapide au Québec</h1>
-            <p class="lead">Prêts personnels et pour entreprises avec approbation rapide</p>
-            <a href="#formulaire" class="btn cta-button text-white mt-3">Demander un prêt</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Nos Solutions de Financement</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="https://edvvadjones.com/wp-content/uploads/2025/02/prets-quebec-financement-rapide2.jpg" class="card-img-top" alt="Prêt personnel Québec" loading="lazy">
-                        <div class="card-body">
-                            <h3 class="card-title">Prêt Personnel</h3>
-                            <p class="card-text">Financez vos projets personnels avec des taux compétitifs et des conditions flexibles.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="https://edvvadjones.com/wp-content/uploads/2025/02/prets-quebec-financement-rapide3.jpg" class="card-img-top" alt="Prêt entreprise Québec" loading="lazy">
-                        <div class="card-body">
-                            <h3 class="card-title">Prêt Entreprise</h3>
-                            <p class="card-text">Développez votre entreprise avec notre financement adapté aux PME québécoises.</p>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="form-group">
+                <label for="duration">Loan Term (months):</label>
+                <input type="number" id="duration" min="1" step="1" value="36">
             </div>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section id="formulaire" class="form-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Demande de Prêt</h2>
-            <form id="loanForm" class="row g-3">
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Nom complet" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="email" class="form-control" placeholder="Email" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="tel" class="form-control" placeholder="Téléphone" required>
-                </div>
-                <div class="col-md-6">
-                    <select class="form-select" required>
-                        <option value="">Type de prêt</option>
-                        <option value="personnel">Personnel</option>
-                        <option value="entreprise">Entreprise</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <input type="number" class="form-control" placeholder="Montant demandé ($)" required>
-                </div>
-                <div class="col-12 text-center">
-                    <button type="submit" class="btn cta-button text-white">Soumettre la demande</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Foire aux Questions</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            Quels sont les critères d'éligibilité?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Résider au Québec, avoir plus de 19 ans et un revenu stable.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            Quel est le délai d'approbation?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Approbation possible en 24-48 heures après soumission.
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="form-group">
+                <label for="rate">Annual Nominal Rate (%):</label>
+                <input type="number" id="rate" min="0" step="0.1" value="3">
             </div>
+            
+            <div class="form-group">
+                <label for="insurance">Monthly Insurance ($):</label>
+                <input type="number" id="insurance" min="0" step="0.1" value="0">
+            </div>
+            
+            <div class="form-group">
+                <label for="startDate">Start Date (First Payment):</label>
+                <input type="date" id="startDate" value="2025-08-01">
+            </div>
+            
+            <button onclick="calculateAmortization()">Click Here to Calculate Amortization Schedule</button>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2025 Prêts Québec. Tous droits réservés.</p>
-            <p><a href="#" class="text-white">Politique de confidentialité</a> | <a href="#" class="text-white">Conditions d'utilisation</a></p>
+        <div id="result">
+            <p>Below you will find the complete amortization schedule of your loan. You can also run another simulation.</p>
+            <p class="note">This is a simulation; the results may be rounded, and the amortization schedule may slightly differ from the corresponding documents provided by your loan issuer.</p>
+            
+            <div id="loanParameters" class="summary"></div>
+            
+            <h2>AMORTIZATION SCHEDULE</h2>
+            <table id="amortizationTable">
+                <thead>
+                    <tr>
+                        <th>Payment</th>
+                        <th>Date</th>
+                        <th>Remaining Balance</th>
+                        <th>Payment</th>
+                        <th>Principal</th>
+                        <th>Interest</th>
+                        <th>Insurance</th>
+                        <th>Total Payment with Insurance</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+            
+            <div id="totals" class="summary"></div>
+            
+            <p>Above you will find the complete amortization schedule of your loan. You can also <a href="#" onclick="window.open(window.location.href, '_blank'); return false;">run another simulation</a> in a new tab.</p>
+            <p>The obtained amortization schedule can serve as a starting point in a loan repurchase process.</p>
         </div>
-    </footer>
+    </div>
 
-    <!-- Bootstrap JS and Custom JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.getElementById('loanForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Votre demande a été soumise avec succès! Nous vous contacterons bientôt.');
-            this.reset();
-        });
+        function calculateAmortization() {
+            // Get input values
+            const amount = parseFloat(document.getElementById('amount').value);
+            const rate = parseFloat(document.getElementById('rate').value);
+            const duration = parseInt(document.getElementById('duration').value);
+            const insurance = parseFloat(document.getElementById('insurance').value);
+            const startDate = new Date(document.getElementById('startDate').value);
 
-        // Smooth scrolling pour les liens de navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+            // Calculations
+            const monthlyRate = rate / 100 / 12;
+            const payment = amount * (monthlyRate * Math.pow(1 + monthlyRate, duration)) / 
+                           (Math.pow(1 + monthlyRate, duration) - 1);
+            const totalPayment = payment + insurance;
+
+            let balance = amount;
+            let tableHTML = '';
+            let currentDate = new Date(startDate);
+            let totalInterest = 0;
+            let totalPayments = 0;
+
+            // Generate parameters display
+            document.getElementById('loanParameters').innerHTML = `
+                <h3>Loan Parameters:</h3>
+                <p>Loan Amount: $${amount.toFixed(2)}</p>
+                <p>Loan Term: ${duration} months</p>
+                <p>Annual Loan Rate: ${rate} %</p>
+                <p>Monthly Insurance: $${insurance.toFixed(2)}</p>
+                <p>Loan Start: ${currentDate.toLocaleDateString('en-US', { month: 'numeric', year: 'numeric' })}</p>
+                <p>Monthly Payment: $${payment.toFixed(2)}</p>
+            `;
+
+            // Generate table
+            for (let month = 1; month <= duration; month++) {
+                const interest = balance * monthlyRate;
+                const principal = payment - interest;
+                balance -= principal;
+
+                totalInterest += interest;
+                totalPayments += payment;
+
+                const dateString = currentDate.toLocaleDateString('en-US', {
+                    month: 'numeric',
+                    year: 'numeric'
                 });
-            });
-        });
+
+                tableHTML += `
+                    <tr>
+                        <td>${month}</td>
+                        <td>${dateString}</td>
+                        <td>$${balance.toFixed(2)}</td>
+                        <td>$${payment.toFixed(2)}</td>
+                        <td>$${principal.toFixed(2)}</td>
+                        <td>$${interest.toFixed(2)}</td>
+                        <td>$${insurance.toFixed(2)}</td>
+                        <td>$${totalPayment.toFixed(2)}</td>
+                    </tr>
+                `;
+
+                currentDate.setMonth(currentDate.getMonth() + 1);
+            }
+
+            document.getElementById('tableBody').innerHTML = tableHTML;
+
+            // Display totals
+            document.getElementById('totals').innerHTML = `
+                <p><strong>TOTAL PAYMENTS EXCLUDING INSURANCE: $${totalPayments.toFixed(2)}</strong></p>
+                <p><strong>TOTAL INTEREST: $${totalInterest.toFixed(2)}</strong></p>
+                <p><strong>TOTAL INSURANCE: $${(insurance * duration).toFixed(2)}</strong></p>
+            `;
+
+            // Show results
+            document.getElementById('result').style.display = 'block';
+        }
     </script>
 </body>
 </html>
