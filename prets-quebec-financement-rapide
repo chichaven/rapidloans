@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obtenez un prêt personnel ou pour entreprise au Québec rapidement. Solutions de financement flexibles et taux compétitifs.">
+    <meta name="keywords" content="prêt personnel Québec, prêt entreprise Québec, financement rapide, crédit Québec">
+    <meta name="author" content="Prêts Québec">
+    <title>Prêts Québec - Financement Personnel et Entreprise</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://edvvadjones.com/wp-content/uploads/2025/02/prets-quebec-financement-rapide.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .form-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .faq-section {
+            padding: 50px 0;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Prêts Québec</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formulaire">Demande</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Financement Rapide au Québec</h1>
+            <p class="lead">Prêts personnels et pour entreprises avec approbation rapide</p>
+            <a href="#formulaire" class="btn cta-button text-white mt-3">Demander un prêt</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nos Solutions de Financement</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://edvvadjones.com/wp-content/uploads/2025/02/prets-quebec-financement-rapide2.jpg" class="card-img-top" alt="Prêt personnel Québec" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="card-title">Prêt Personnel</h3>
+                            <p class="card-text">Financez vos projets personnels avec des taux compétitifs et des conditions flexibles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://edvvadjones.com/wp-content/uploads/2025/02/prets-quebec-financement-rapide3.jpg" class="card-img-top" alt="Prêt entreprise Québec" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="card-title">Prêt Entreprise</h3>
+                            <p class="card-text">Développez votre entreprise avec notre financement adapté aux PME québécoises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="formulaire" class="form-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Demande de Prêt</h2>
+            <form id="loanForm" class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Nom complet" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="tel" class="form-control" placeholder="Téléphone" required>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select" required>
+                        <option value="">Type de prêt</option>
+                        <option value="personnel">Personnel</option>
+                        <option value="entreprise">Entreprise</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <input type="number" class="form-control" placeholder="Montant demandé ($)" required>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn cta-button text-white">Soumettre la demande</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Foire aux Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Quels sont les critères d'éligibilité?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Résider au Québec, avoir plus de 19 ans et un revenu stable.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Quel est le délai d'approbation?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Approbation possible en 24-48 heures après soumission.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Prêts Québec. Tous droits réservés.</p>
+            <p><a href="#" class="text-white">Politique de confidentialité</a> | <a href="#" class="text-white">Conditions d'utilisation</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loanForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Votre demande a été soumise avec succès! Nous vous contacterons bientôt.');
+            this.reset();
+        });
+
+        // Smooth scrolling pour les liens de navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
